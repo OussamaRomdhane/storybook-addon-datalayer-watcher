@@ -1,4 +1,4 @@
-import { styled } from "@storybook/theming";
+import { styled } from "storybook/theming";
 
 export const Container = styled.div`
   position: sticky;

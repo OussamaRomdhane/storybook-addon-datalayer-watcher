@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { IconButton, Icons, Spaced } from "@storybook/components";
+import { Button } from "storybook/internal/components";
 
 import { getStorybookIframe } from "src/utils/storybook";
 
@@ -17,10 +17,7 @@ export const PanelActionsBar = () => {
   return (
     <Container>
       <Bar>
-        <IconButton onClick={handleClear}>
-          <Icons icon="trash" />
-          Clear dataLayer
-        </IconButton>
+        <Button onClick={handleClear}>🗑️ Clear dataLayer</Button>
       </Bar>
     </Container>
   );

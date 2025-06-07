@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-datalayer-watcher",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Get GTM's dataLayer events in Storybook",
   "keywords": [
     "storybook",
@@ -51,25 +51,12 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "7.0.0",
-    "@storybook/addon-interactions": "7.0.0",
-    "@storybook/addon-links": "7.0.0",
-    "@storybook/blocks": "7.0.0",
-    "@storybook/components": "7.0.0",
-    "@storybook/core-events": "7.0.0",
-    "@storybook/manager": "^7.6.0",
-    "@storybook/manager-api": "7.0.0",
-    "@storybook/preview": "^7.6.0",
-    "@storybook/preview-api": "7.0.0",
-    "@storybook/react": "7.0.0",
-    "@storybook/react-vite": "7.0.0",
-    "@storybook/testing-library": "^0.2.2",
-    "@storybook/theming": "7.0.0",
-    "@storybook/types": "7.0.0",
+    "@storybook/react-vite": "^9.0.6",
+    "@types/lodash": "^4.17.17",
     "@types/node": "^18.15.0",
     "@types/react": "^16.14.51",
     "@types/react-dom": "^16.9.22",
-    "@vitejs/plugin-react": "^4.1.1",
+    "@vitejs/plugin-react": "^4.5.1",
     "auto": "^11.0.4",
     "boxen": "^7.1.1",
     "dedent": "^1.5.1",
@@ -79,11 +66,14 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "rimraf": "^5.0.5",
-    "storybook": "7.0.0",
+    "storybook": "^9.0.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "vite": "^4.5.0",
+    "vite": "^5.0.0",
     "zx": "^7.2.3"
+  },
+  "peerDependencies": {
+    "storybook": "^9.0.0"
   },
   "publishConfig": {
     "access": "public"

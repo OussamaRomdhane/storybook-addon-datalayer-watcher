@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import { ObjectInspector } from "react-inspector";
 import { isEqual } from "lodash";
 
-import { withTheme } from "@storybook/theming";
-import { STORY_CHANGED } from "@storybook/core-events";
-import { useAddonState, useChannel } from "@storybook/manager-api";
+import { withTheme } from "storybook/theming";
+import { STORY_CHANGED } from "storybook/internal/core-events";
+import { useAddonState, useChannel } from "storybook/manager-api";
 
 import { getStorybookIframe } from "src/utils/storybook";
 import { ADDON_ID, COUNT_SYMBOL } from "src/constants";

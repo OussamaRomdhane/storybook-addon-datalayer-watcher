@@ -1,4 +1,4 @@
-import { addons, types, useAddonState } from "@storybook/manager-api";
+import { addons, types, useAddonState } from "storybook/manager-api";
 
 import { ADDON_ID, PANEL_ID } from "src/constants";
 import { Panel } from "src/components";

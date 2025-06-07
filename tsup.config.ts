@@ -1,11 +1,15 @@
 import { defineConfig, type Options } from "tsup";
 import { readFile } from "fs/promises";
-import { globalPackages as globalManagerPackages } from "@storybook/manager/globals";
-import { globalPackages as globalPreviewPackages } from "@storybook/preview/globals";
+import { globalPackages as globalManagerPackages } from "storybook/internal/manager/globals";
+import { globalPackages as globalPreviewPackages } from "storybook/internal/preview/globals";
 
 // The current browsers supported by Storybook v7
-const BROWSER_TARGET: Options['target'] = ["chrome100", "safari15", "firefox91"];
-const NODE_TARGET: Options['target'] = ["node16"];
+const BROWSER_TARGET: Options["target"] = [
+  "chrome100",
+  "safari15",
+  "firefox91",
+];
+const NODE_TARGET: Options["target"] = ["node16"];
 
 type BundlerConfig = {
   bundler?: {
@@ -26,7 +30,9 @@ export default defineConfig(async (options) => {
   //     "previewEntries": ["./src/preview.ts"]
   //   }
   // }
-  const packageJson = await readFile('./package.json', 'utf8').then(JSON.parse) as BundlerConfig;
+  const packageJson = (await readFile("./package.json", "utf8").then(
+    JSON.parse,
+  )) as BundlerConfig;
   const {
     bundler: {
       exportEntries = [],
@@ -55,7 +61,7 @@ export default defineConfig(async (options) => {
       dts: {
         resolve: true,
       },
-      format: ["esm", 'cjs'],
+      format: ["esm", "cjs"],
       target: [...BROWSER_TARGET, ...NODE_TARGET],
       platform: "neutral",
       external: [...globalManagerPackages, ...globalPreviewPackages],

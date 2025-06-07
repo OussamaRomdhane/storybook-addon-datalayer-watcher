@@ -1,4 +1,4 @@
-import type { Theme } from "@storybook/theming";
+import type { Theme } from "storybook/theming";
 
 export interface InspectorProps {
   key: string | number;
