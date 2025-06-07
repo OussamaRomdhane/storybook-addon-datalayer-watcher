@@ -1,6 +1,4 @@
-import type { Preview } from "@storybook/react";
-
-const preview: Preview = {
+const preview = {
   parameters: {
     backgrounds: {
       default: "light",
